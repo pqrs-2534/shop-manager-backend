@@ -23,11 +23,8 @@ const app = express();
 
 // Allow requests from your React frontend
 app.use(cors({
-  origin: [
-    'http://localhost:3000',                    // React dev server
-    process.env.FRONTEND_URL || '*',            // Production frontend URL from .env
-  ],
-  credentials: true,
+  origin: '*',
+  credentials: false,
 }));
 
 // Parse incoming JSON request bodies
